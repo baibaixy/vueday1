@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const url = 'http://www.baidu.com?name=zhangsan&age=18&sex=nan#'
+        // const process = (url) => {
+        //     const index1 = url.indexOf('?')
+        //     const index2 = url.indexOf('#')
+        //     const params = url.slice(index1 + 1, index2).split('&')
+        //     return params.reduce((pre, curr) => {
+        //         const [key, value] = curr.split('=')
+        //         pre[key] = value
+        //         return pre
+        //     }, {})
+        // }
+        // console.log(process(url));
+        // let arr = [{ a: 100 }, { a: 20 }, { a: -10 }]
+        // const sum = arr.reduce((pre, curr) => {
+        //     return pre + curr.a
+
+        // }, 0)
+        // console.log(sum);
+        let str = 'asdasdasdasdasdasd'
+        let countedStr = str.split('').reduce(function(allkeys, key){
+            if(key in  allkeys) {
+                allkeys[key]++
+            }else{
+                allkeys[key] = 1
+            }
+            return allkeys
+        }, {})
+        console.log(countedStr);
+
+    </script>
+</body>
+
+</html>
